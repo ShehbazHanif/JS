@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.main{
+    border: 1px solid black;
+    width: 30%;
+    margin: 12% auto;
+    height: 330px;
+}
+#display{
+    width: 80%;
+    height: 10%;
+    margin: 2% 10%;
+}
+.flex-container{
+    border: 1px solid red;
+    display: flex;
+    height: 50px;
+
+}
+.button {
+    margin-left:2%;
+  width: 20%;
+    height:100%;
+    border: 1px solid #fff;
+}
+    </style>
+</head>
+
+<body>
+    <section class="main">
+        <input type="text" id="display" readonly >
+        <div class="flex-container">
+            <input type="button" value="1" onclick="display.value +=1" class="button" id="btn1" >
+            <input type="button" value="2" onclick="display.value +=2" class="button" id="btn1">
+            <input type="button" value="3" onclick="display.value +=3" class="button" id="btn1">
+            <input type="button" value="4" onclick="display.value +=4" class="button" id="btn1">
+        </div>
+        <div class="flex-container">
+            <input type="button" value="5" onclick="display.value +=5" class="button" id="btn1" >
+            <input type="button" value="6" onclick="display.value +=6" class="button" id="btn1">
+            <input type="button" value="7" onclick="display.value +=7" class="button" id="btn1">
+            <input type="button" value="8" onclick="display.value +=8" class="button" id="btn1">
+        </div>
+        <div class="flex-container">
+            <input type="button" value="9" onclick="display.value +=9" class="button" id="btn1" >
+            <input type="button" value="0" onclick="display.value +=0" class="button" id="btn1">
+            <input type="button" value="+" onclick="display.value +='+'" class="button" id="btn1">
+            <input type="button" value="-" onclick="display.value +='-'" class="button" id="btn1">
+        </div>
+        
+        <div class="flex-container">
+            <input type="button" value="=" onclick="display.value = eval(display.value)" class="button" id="btn1" >
+            <input type="button" value="sq" onclick="display.value = display.value ** 2" class="button" id="btn1">
+            <input type="button" value="root" onclick ="display.value = Math.sqrt(display.value)"
+             class="button" id="btn1">
+            <input type="button" value="%" onclick="display.value =display.value/100" class="button" id="btn1">
+        </div>
+        <div class="flex-container">
+            <input type="button" value="del" onclick="display.value = display.value.slice(0, -1)" class="button" id="btn1" >
+            <input type="button" value="clr" onclick= "display.value =''" class="button" id="btn1">
+            <input type="button" value="x" onclick="display.value +='*'" class="button" id="btn1">
+            <input type="button" value="/" onclick="display.value +='/'" class="button" id="btn1">
+        </div>
+    </section>
+</body>
+</html>

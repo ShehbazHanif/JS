@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+   <div class="row" id="players"></div>
+    </div>
+    <script>
+        const player_info=[
+            {name:'Babar Azam' , image:'./image/babar azam.jpg',type:'Right-Arm-Batsman',age:24},
+            {name:'Muhammad Rizwan' , image:'./image/download.jpg',type:'Right-Arm-Batsman',age:25},
+            {name:'Shadab Khan' , image:'./image/shadab.jpg',type:'All-Rounder',age:23},
+            {name:'Shaheen Afridi' , image:'./image/shaheen.jpg',type:'Left-Arm-Bowler',age:23},
+            {name:'Naseem Shah' , image:'./image/naseem.jpg',type:'Right-Arm-Bowler',age:22},
+            {name:'Haris Rauf' , image:'./image/haris.jpg',type:'Right-Arm-Bowler',age:26},
+            {name:'Fahkhar Zaman' , image:'./image/fahkhar.jpg',type:'Left-Arm-Batsman',age:27},
+            {name:'Asif Ali' , image:'./image/Asif.jpg',type:'Hittter',age:28},
+            {name:'Saim Ayub' , image:'./image/saim.jpg',type:'Left-Arm-Batsman',age:21},
+            {name:'Muhammad Haris' , image:'./image/M Haris.jpg',type:'Hitter',age:24},
+            {name:'Muhammad Nawaz' , image:'./image/nawaz.jpg',type:'All-Rounder',age:25},
+            {name:'Salman Agha' , image:'./image/salman.jpg',type:'All-Rounder',age:24}
+        ]
+        var playersCards ='';
+        for(let player of player_info){
+            playersCards +=`
+                        <div class="col-md-4">
+                        <img src="${player.image}" class="card-img-top" alt="..." width="200px" height="200">
+                         <div class="card-body">
+                        <h5 class="card-title">${player.name}</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">${player.type}</li>
+                        <li class="list-group-item">${player.age}</li>
+                        </ul>
+                        </div>
+                        `
+                      }
+          document.getElementById('players').innerHTML=playersCards ;         
+    </script>
+</body>
+</html>
+<!-- step 1  create file with name player-info -->
+<!-- step 2 create a section to store player-info -->
+<!-- step 3  create a list for  player-info in JS file -->
+<!-- step 4  Then with help of loop ilterate each player info that is store in js file -->
+<!-- step 5 update the player list container with inner html........ -->
