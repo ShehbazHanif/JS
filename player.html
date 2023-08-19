@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="row" id="players"></div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+       const players = [
+         {id:1, name:"Babar Azam" ,image:'./image/babar azam.jpg',type:'Batsman'},
+         {id:1, name:"Rizwan" ,image:'./image/babar azam.jpg',type:'Batsman'}
+       ];
+
+       var playerCards = '';
+
+     for(let player of players){
+        playerCards += `<div class="col-md-4 mt-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="${player.image}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${player.name}</h5>
+                        <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">${player.type}</li>
+                    </ul>
+                    
+                    </div>
+            </div>
+       
+       `
+     }
+
+     document.getElementById("players").innerHTML = playerCards;
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- 
+
+  step 1: create file with a name player.html
+
+  step 2: create a container to list all players
+
+  step 3: create a list of all players in js file
+
+  step 4: loop the players list and create html for each player
+  step 5: update the player list container with creatd players html
+ -->
